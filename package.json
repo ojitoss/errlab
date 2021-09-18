@@ -22,5 +22,13 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ojitoss/errlab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ojitoss/errlab/issues"
+  },
+  "homepage": "https://github.com/ojitoss/errlab#readme"
 }
