@@ -1,0 +1,26 @@
+{
+  "name": "errlab",
+  "version": "0.0.1",
+  "description": "errlab is an error generator to have a faster development regarding the creation of errors.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon test.js"
+  },
+  "keywords": [
+    "errlab",
+    "error generator",
+    "error",
+    "library",
+    "front-end"
+  ],
+  "author": "ojitos",
+  "license": "MIT",
+  "devDependencies": {
+    "autag": "^3.2.2",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
