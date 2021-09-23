@@ -1,6 +1,6 @@
 {
   "name": "errlab",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "errlab is an error generator to have a faster development regarding the creation of errors.",
   "main": "index.js",
   "scripts": {
