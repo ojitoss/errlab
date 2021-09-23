@@ -25,11 +25,39 @@ ___
 ___
 
 ## class:
+  * [legend](#legend-class)
   * [block](#block-class)
   * [input](#input-class)
   * [button](#button-class)
   * [details](#details-class)
   * [table](#table-class)
+___
+
+### legend-class:
+The **legend** class is used to create a block where you will put an error message.
+
+**parameters:**
+  1. **message:** this parameter is to define the message of the legend.
+
+a code of this class would look like this:
+```js
+const errlab = require('errlab');
+const expres = require('express');
+const app = expres();
+
+app.get('/', (req, res)=> {
+    res.send(new errlab.legend({
+      message: "Test error blocks"
+    }).user());
+});
+
+app.listen(3000, ()=> {
+    console.log('Server on port 3000');
+});
+```
+I would give as an answer this:
+
+![test error block](assets/test_error_legend.png)
 ___
 
 ### block-class:
