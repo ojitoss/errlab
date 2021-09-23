@@ -3,10 +3,8 @@ const expres = require('express');
 const app = expres();
 
 app.get('/', (req, res)=> {
-    res.send(new errlab.table({
-        title: "Test error title table",
-        type: "Test",
-        message: "Test error table"
+    res.send(new errlab.legend({
+        message: "Test legend errors"
       }).user());
 });
 
