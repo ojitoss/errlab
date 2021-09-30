@@ -1,11 +1,12 @@
 const errlab = require('./index.js');
-const expres = require('express');
-const app = expres();
+const express = require('express');
+const app = express();
 
 app.get('/', (req, res)=> {
-    res.send(new errlab.legend({
-        message: "Test legend errors"
-      }).user());
+    res.send(new errlab.link({
+        message: "Test error link",
+        href: "/"
+    }).user());
 });
 
 app.listen(3000, ()=> {
