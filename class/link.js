@@ -3,7 +3,7 @@ class link {
     /**
      * class to define error links
      * @param {String} message this parameter is to define the message of the block.
-     * @param {String} href this 
+     * @param {String} href this parameter is used to define the redirection of the link 
      */
     constructor({message, href}) {
         this.message = message;

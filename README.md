@@ -17,7 +17,7 @@ ___
 
 ## important:
   * errlab is in alpha phase so it may have several errors or things to improve.
-  * to use errlab you need some backend framework like express.
+  * to use errlab you need a tool that transforms html code (in the case of documentation, express will be used).
 ___
 
 ## installation:
@@ -26,6 +26,7 @@ ___
 
 ## class:
   * [legend](#legend-class)
+  * [link](#link-class)
   * [block](#block-class)
   * [input](#input-class)
   * [button](#button-class)
@@ -42,8 +43,8 @@ The **legend** class is used to create a block where you will put an error messa
 a code of this class would look like this:
 ```js
 const errlab = require('errlab');
-const expres = require('express');
-const app = expres();
+const express = require('express');
+const app = express();
 
 app.get('/', (req, res)=> {
     res.send(new errlab.legend({
@@ -57,7 +58,37 @@ app.listen(3000, ()=> {
 ```
 I would give as an answer this:
 
-![test error block](assets/test_error_legend.png)
+![test error legend](assets/test_error_legend.png)
+___
+
+### link-class:
+The class **link** is used to create a link where you will put an error message and it will redirect you somewhere.
+
+**parameters:**
+  1. **message:** this parameter is used to define the message of the link.
+
+  2. **href:** this parameter is used to define the redirection of the link.
+
+a code of this class would look like this:
+```js
+const errlab = require('errlab');
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res)=> {
+    res.send(new errlab.link({
+      message: "Test error links",
+      href: "/"
+    }).user());
+});
+
+app.listen(3000, ()=> {
+    console.log('Server on port 3000');
+});
+```
+I would give as an answer this:
+
+![test error link](assets/test_error_link.png)
 ___
 
 ### block-class:
@@ -69,8 +100,8 @@ The **block** class is used to create a block where you will put an error messag
 a code of this class would look like this:
 ```js
 const errlab = require('errlab');
-const expres = require('express');
-const app = expres();
+const express = require('express');
+const app = express();
 
 app.get('/', (req, res)=> {
     res.send(new errlab.block({
@@ -100,8 +131,8 @@ The **input** class is used to create an input where you will put an error messa
 a code of this class would look like this:
 ```js
 const errlab = require('errlab');
-const expres = require('express');
-const app = expres();
+const express = require('express');
+const app = express();
 
 app.get('/', (req, res)=> {
     res.send(new errlab.input({
@@ -131,8 +162,8 @@ The **button** class is used to create a block where you will put an error messa
 a code of this class would look like this:
 ```js
 const errlab = require('errlab');
-const expres = require('express');
-const app = expres();
+const express = require('express');
+const app = express();
 
 app.get('/', (req, res)=> {
     res.send(new errlab.button({
@@ -161,8 +192,8 @@ The **details** class is used to create a tab where you will put an error messag
 a code of this class would look like this:
 ```js
 const errlab = require('errlab');
-const expres = require('express');
-const app = expres();
+const express = require('express');
+const app = express();
 
 app.get('/', (req, res)=> {
     res.send(new errlab.details({
@@ -192,8 +223,8 @@ The **table** class is used to create a block where you will put an error messag
 a code of this class would look like this:
 ```js
 const errlab = require('errlab');
-const expres = require('express');
-const app = expres();
+const express = require('express');
+const app = express();
 
 app.get('/', (req, res)=> {
     res.send(new errlab.table({
@@ -209,7 +240,7 @@ app.listen(3000, ()=> {
 ```
 I would give as an answer this:
 
-![test error block](assets/test_error_table.png)
+![test error table](assets/test_error_table.png)
 ___
 
 <details>
